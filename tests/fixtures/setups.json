@@ -1,0 +1,5 @@
+{
+  "base": { "instructions": ["Check supplies."] },
+  "cold": { "extends": "base", "instructions": ["Check insulation."] },
+  "cold-plus": { "extends": "cold" }
+}

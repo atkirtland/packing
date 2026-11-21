@@ -1,0 +1,11 @@
+# Personal inventory and setup configuration (at any depth).
+packinglist.csv
+events.json
+
+# Local editor and operating system files.
+.obsidian/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~

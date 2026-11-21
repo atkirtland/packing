@@ -1,0 +1,66 @@
+.possessions-view {
+  --pv-accent: #5d9b88;
+  color: var(--text-normal);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.possessions-view * { box-sizing: border-box; }
+.possessions-view .pv-header { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.possessions-view .pv-eyebrow { color: var(--pv-accent); font-size: 10px; letter-spacing: .16em; font-weight: 700; }
+.possessions-view h2 { margin: 3px 0 8px; font-size: 28px; }
+.possessions-view .pv-status, .possessions-view .pv-caption { color: var(--text-muted); font-size: 12px; overflow-wrap: anywhere; }
+.possessions-view .pv-toolbar { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; align-items: end; }
+.possessions-view .pv-toolbar label { display: flex; flex-direction: column; gap: 4px; font-size: 11px; color: var(--text-muted); }
+.possessions-view .pv-toolbar input[type="search"], .possessions-view select { width: 100%; min-height: 34px; color: var(--text-normal); }
+.possessions-view .pv-search { flex: 1 1 220px; }
+.possessions-view .pv-toolbar .pv-check { flex-direction: row; align-items: center; min-height: 34px; }
+.possessions-view .pv-summary { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: 1px solid var(--background-modifier-border); border-radius: 10px; overflow: hidden; }
+.possessions-view .pv-stat { padding: 16px; background: var(--background-secondary); display: flex; flex-direction: column; gap: 3px; }
+.possessions-view .pv-stat strong { font-size: 21px; font-weight: 600; overflow-wrap: anywhere; }
+.possessions-view .pv-stat span { font-size: 11px; color: var(--text-muted); }
+.possessions-view .pv-chart { display: flex; align-items: center; gap: 30px; padding: 20px 8px 30px; }
+.possessions-view .pv-donut { width: 158px; height: 158px; flex-shrink: 0; border-radius: 50%; display: grid; place-items: center; }
+.possessions-view .pv-donut-center { width: 118px; height: 118px; border-radius: 50%; background: var(--background-primary); display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.possessions-view .pv-donut-center strong { font-size: 18px; }
+.possessions-view .pv-donut-center span { font-size: 11px; color: var(--text-muted); }
+.possessions-view .pv-legend { flex: 1; min-width: 0; }
+.possessions-view .pv-legend-row { display: grid; grid-template-columns: 9px minmax(70px, 1fr) auto auto; align-items: center; gap: 12px; padding: 5px 0; font-size: 12px; }
+.possessions-view .pv-legend-row > span:nth-child(2) { overflow-wrap: anywhere; }
+.possessions-view .pv-dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.possessions-view .pv-muted, .possessions-view .pv-description { color: var(--text-muted); font-size: 12px; }
+.possessions-view .pv-event-location { min-width: 150px; overflow-wrap: anywhere; color: var(--text-muted); font-size: 12px; }
+.possessions-view .pv-group { margin: 0 0 20px; border: 1px solid var(--background-modifier-border); border-radius: 8px; overflow: hidden; }
+.possessions-view .pv-group > summary { padding: 12px 14px; cursor: pointer; background: var(--background-secondary); }
+.possessions-view .pv-group > summary .pv-dot { margin-right: 8px; }
+.possessions-view .pv-group-total { float: right; color: var(--text-muted); font-size: 12px; margin-left: 12px; }
+.possessions-view .pv-table-scroll { overflow-x: auto; }
+.possessions-view table.pv-table { width: 100%; margin: 0; border-collapse: collapse; font-size: 13px; }
+.possessions-view .pv-table th { color: var(--text-muted); font-size: 10px; text-transform: uppercase; letter-spacing: .05em; font-weight: 500; text-align: left; }
+.possessions-view .pv-table th, .possessions-view .pv-table td { padding: 11px 12px; border: 0; border-bottom: 1px solid var(--background-modifier-border); vertical-align: middle; }
+.possessions-view .pv-table tr:last-child td { border-bottom: 0; }
+.possessions-view .pv-table th:nth-last-child(-n+3), .possessions-view .pv-numeric { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.possessions-view .pv-item { min-width: 190px; width: 40%; }
+.possessions-view .pv-item-content { display: flex; align-items: center; gap: 12px; }
+.possessions-view .pv-name { font-weight: 600; overflow-wrap: anywhere; }
+.possessions-view a.pv-name { color: var(--text-normal); text-decoration-color: var(--pv-accent); text-underline-offset: 3px; }
+.possessions-view .pv-photo { width: 42px; height: 42px; object-fit: contain; border-radius: 5px; flex-shrink: 0; background: var(--background-secondary); }
+.possessions-view .pv-tags { display: flex; gap: 4px; flex-wrap: wrap; }
+.possessions-view .pv-active-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+.possessions-view .pv-active-tags:empty { display: none; }
+.possessions-view button.pv-tag[aria-pressed="true"], .possessions-view .pv-active-tags button.pv-tag { color: var(--text-accent); border: 1px solid var(--background-modifier-border); }
+.possessions-view button.pv-tag { height: auto; padding: 2px 6px; font-size: 10px; border: 0; box-shadow: none; background: var(--background-secondary); color: var(--text-muted); border-radius: 4px; cursor: pointer; }
+.possessions-view .pv-empty { padding: 24px; text-align: center; color: var(--text-muted); }
+.possessions-view .pv-old { opacity: .55; filter: grayscale(1); }
+.possessions-view .pv-old .pv-name { color: var(--text-muted); }
+.possessions-view .pv-instructions:empty { display: none; }
+.possessions-view .pv-instructions { margin-bottom: 20px; padding: 12px 16px; border: 1px solid var(--background-modifier-border); border-radius: 8px; background: var(--background-secondary); }
+.possessions-view .pv-instructions h3 { margin: 0 0 8px; }
+.possessions-view .pv-instruction-text { white-space: pre-wrap; }
+.possessions-view .pv-warnings { color: var(--text-warning); font-size: 12px; margin: 16px 0; }
+@media (max-width: 650px) {
+  .possessions-view .pv-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .possessions-view .pv-chart { flex-direction: column; gap: 16px; }
+  .possessions-view .pv-legend { width: 100%; }
+  .possessions-view .pv-group-total { float: none; display: block; margin: 4px 0 0 18px; }
+  .possessions-view .pv-header { align-items: start; }
+}

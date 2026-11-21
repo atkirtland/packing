@@ -1,0 +1,11 @@
+name,description,weight,quantity,tags,status,notes
+Lamp,,100 g,2,event/base/bag;group/electronics,owned,
+Bottle,,,,event/base/bag;group/kitchen,owned,
+Warm-weather filter,,30 g,1,event/base/bag;omit/cold;group/kitchen,owned,
+Cold-weather filter,,50 g,1,event/cold/bag;group/kitchen,owned,
+Coat,,300 g,1,event/cold/bag;group/clothing,owned,
+Mug,"Small, reusable cup",80 g,1,event/base/bag;group/kitchen,owned,"Wash after use."
+Former item,,200 g,1,event/base/shelf;old,owned,
+Blanket,,400 g,1,event/cold/bag,wishlist,
+Pouch,,,,event/base/bag,uncertain,
+Spare battery,,20 g,1,event/base/bag;omit/cold;event/cold-plus/pocket,owned,
